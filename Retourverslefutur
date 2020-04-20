@@ -1,0 +1,12 @@
+<?php
+$FuelperDay = 3;
+$presentTime = new dateTime();
+$destinationTime = new dateTime('2038-10-03 20:10:52');
+$difference = $presentTime->diff($destinationTime);
+echo $presentTime->format("M j Y a h:i ");
+echo '<br />';
+echo $destinationTime->format("M j Y a h:i ");
+echo '<br />';
+echo $difference->format('Cela fait %Y années, %m mois ,%d jours, %h heures et %i minutes de différence');
+echo '<br />';
+echo $difference->days*$FuelperDay . ' litres de carburant seront nécessaire au voyage';
